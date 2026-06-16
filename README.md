@@ -54,31 +54,6 @@ DAILY_REQUEST_LIMIT=20
 | `INVITE_CODES` | 逗号分隔的邀请码，留空则关闭验证 |
 | `DAILY_REQUEST_LIMIT` | 每个邀请码每日请求上限（默认 20） |
 
-## Zeabur 部署（单服务）
-
-1. 推送代码到 GitHub（确保 `.env` 和 `INVITE_CODES.local.md` 未提交）
-2. Zeabur → New Project → 连接仓库
-3. 配置：
-
-| 项 | 值 |
-|----|-----|
-| **Build Command** | `npm run build` |
-| **Start Command** | `npm start` |
-| **Root Directory** | `/` |
-
-4. 环境变量（Zeabur 控制台）：
-
-```
-NODE_ENV=production
-LLM_PROVIDER=openai
-OPENAI_API_KEY=你的Key
-OPENAI_BASE_URL=https://api.deepseek.com/v1
-OPENAI_MODEL=deepseek-chat
-INVITE_CODES=你的邀请码,逗号分隔
-DAILY_REQUEST_LIMIT=20
-```
-
-5. 部署完成后，将链接和对应邀请码私下发给朋友。
 
 ## API 接口
 
